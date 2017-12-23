@@ -1,0 +1,3 @@
+rootProject.name = 'VBATicketing'
+
+include ':app'
