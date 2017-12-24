@@ -39,18 +39,57 @@
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string></string>
-	<key>NSAppTransportSecurity</key>
-	<!--See http://ste.vn/2015/06/10/configuring-app-transport-security-ios-9-osx-10-11/ -->
-	<dict>
-		<key>NSExceptionDomains</key>
+	<string/>
+  <key>NSAppTransportSecurity</key>
+  <dict>
+    <key>NSAllowsArbitraryLoads</key>
+    <true/>
+  </dict>
+  <key>UIAppFonts</key>
+  <array>
+    <string>Entypo.ttf</string>
+    <string>EvilIcons.ttf</string>
+    <string>Feather.ttf</string>
+    <string>FontAwesome.ttf</string>
+    <string>Foundation.ttf</string>
+    <string>Ionicons.ttf</string>
+    <string>MaterialCommunityIcons.ttf</string>
+    <string>MaterialIcons.ttf</string>
+    <string>Octicons.ttf</string>
+    <string>SimpleLineIcons.ttf</string>
+    <string>Zocial.ttf</string>
+  </array>
+	<key>CFBundleURLTypes</key>
+	<array>
 		<dict>
-			<key>localhost</key>
-			<dict>
-				<key>NSExceptionAllowsInsecureHTTPLoads</key>
-				<true/>
-			</dict>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>ak419722941786462</string>
+				<string>fb419722941786462</string>
+			</array>
 		</dict>
-	</dict>
+	</array>
+  <key>AccountKitClientToken</key>
+  <string>718f9266933e9508391fc3609d958b75</string>
+	<key>FacebookAppID</key>
+	<string>419722941786462</string>
+	<key>FacebookDisplayName</key>
+	<string>loginSDK</string>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>fbapi</string>
+		<string>fb-messenger-api</string>
+		<string>fb-messenger-share-api</string>
+		<string>fbauth2</string>
+		<string>fbshareextension</string>
+	</array>
+  <key>NSCameraUsageDescription</key>
+  <string>$(PRODUCT_NAME) would like to use your camera</string>
+  <key>NSMicrophoneUsageDescription</key>
+  <string>$(PRODUCT_NAME) would like to your microphone (for videos)</string>
+  <key>NSPhotoLibraryAddUsageDescription</key>
+  <string>$(PRODUCT_NAME) would like to save photos to your photo gallery</string>
+  <key>NSPhotoLibraryUsageDescription</key>
+  <string>$(PRODUCT_NAME) would like access to your photo gallery</string>
 </dict>
 </plist>

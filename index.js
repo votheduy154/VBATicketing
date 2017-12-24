@@ -1,4 +1,3 @@
-import { AppRegistry } from 'react-native';
-import App from './App';
-
-AppRegistry.registerComponent('VBATicketing', () => App);
+// import { AppRegistry } from 'react-native';
+import App from "./src/App";
+// AppRegistry.registerComponent('VBATicketing', () => App);
