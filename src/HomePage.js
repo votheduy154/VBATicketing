@@ -9,11 +9,6 @@ import LinearGradient from "react-native-linear-gradient";
 import LocalizedStrings from "react-native-localization";
 import ImagePicker from "react-native-image-picker";
 
-const instructions = Platform.select({
-  ios: "Press Cmd+R to reload,\n" + "Cmd+D or shake for dev menu",
-  android: "Double tap R on your keyboard to reload,\n" + "Shake or press menu button for dev menu"
-});
-
 let strings = new LocalizedStrings({
   en: {
     how: "How do you want your egg today 123?",
@@ -29,7 +24,7 @@ let strings = new LocalizedStrings({
   }
 });
 
-export default class App extends Component {
+export default class HomeScreen extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -194,12 +189,19 @@ export default class App extends Component {
     });
   }
 
+  nextScreen() {
+    this.props.navigator.push({
+      screen: "RNBoot.DemoScreen",
+      title: "Xin chao",
+      animationType: "slide-horizontal"
+    });
+  }
+
   render() {
     console.log(this.state);
     AccessToken.getCurrentAccessToken().then(token => {
       console.log(token);
     });
-    console.log();
     return (
       <View style={styles.container}>
         <Text style={{ fontSize: 20 }}>{this.state.fbData}</Text>
@@ -227,8 +229,9 @@ export default class App extends Component {
         <Text style={styles.title}>{strings.how}</Text>
         <View>{this.state.loggedAccount ? this.renderUserLogged() : this.renderLogin()}</View>
         <Text style={styles.welcome}>{DeviceInfo.getUniqueID()}</Text>
-        <Text style={styles.instructions}>To get started, edit App.js</Text>
-        <Text style={styles.instructions}>{instructions}</Text>
+        <Text onPress={() => this.nextScreen()} style={styles.instructions}>
+          To get started, edit App.js
+        </Text>
       </View>
     );
   }
